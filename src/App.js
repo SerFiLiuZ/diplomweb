@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import AuthorizationCollapse from './Components/AuthorizationCollapse';
+import MenuWEB from './Views/MenuWEB';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkAuthStatus = () => {
+      const isAuthenticated = localStorage.getItem('authorization') !== null;
+      setIsLoggedIn(isAuthenticated);
+    };
+
+    checkAuthStatus();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      {!isLoggedIn && <AuthorizationCollapse setIsLoggedIn={setIsLoggedIn} />}
+      {isLoggedIn && <MenuWEB setIsLoggedIn={setIsLoggedIn} />}
     </div>
   );
 }
