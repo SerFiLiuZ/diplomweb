@@ -22,7 +22,7 @@ if (userStatus === "manager") {
   items1 = ['Главная', 'Проекты'];
 }
 
-const pageTitles = ['страница самая главная', 'страница всех проектов', 'страница всех работников', 'страница всех заявочек'];
+const pageTitles = ['', '', '', ''];
 
 const MenuWEB = ({ setIsLoggedIn }) => {
   const [modalExitActive, setModalExitActive] = useState(false);

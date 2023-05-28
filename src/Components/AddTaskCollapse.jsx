@@ -32,9 +32,9 @@ const AddTaskCollapse = (props) => {
 
       const urgencyMap = {
         'Нет': 'none',
-        'Не очень срочно': '#70a86e',
-        'Срочно': '#daa748',
-        'Очень срочно': '#d75f5f',
+        'Не очень срочно': '#14D100',
+        'Срочно': '#E2FA00',
+        'Очень срочно': '#FB000D',
       };
 
       const response = await Manager.createTask(

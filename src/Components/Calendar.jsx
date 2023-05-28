@@ -27,11 +27,11 @@ const App = () => {
     const data = listData.map((item) => {
       let type = 'info';
   
-      if (item.task_color === '#d3f261') {
+      if (item.task_color === '#14D100') {
         type = 'success';
-      } else if (item.task_color === '#ffd666') {
+      } else if (item.task_color === '#E2FA00') {
         type = 'warning';
-      } else if (item.task_color === '#ff7875') {
+      } else if (item.task_color === '#FB000D') {
         type = 'error';
       }
   

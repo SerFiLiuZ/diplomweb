@@ -7,8 +7,8 @@ function General() {
   return (
     <div style={{ height: '100vh' }}>
       <Row style={{ height: '100%' }}>
-        <Col span={12}><CalendarMy/></Col>
-        <Col span={12}></Col>
+        <Col span={24}><CalendarMy/></Col>
+    
       </Row>
     </div>
   );
